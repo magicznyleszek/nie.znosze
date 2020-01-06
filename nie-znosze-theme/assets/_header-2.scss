@@ -1,0 +1,72 @@
+.shb-header-2 {
+  @extend %shb-banner-after-header;
+
+  .shb-header-top {
+    @extend %shb-header-top;
+  }
+
+  .shb-header-social {
+    @extend %social-links;
+
+    li {
+      margin-right: 7px;
+    }
+  }
+
+  #logo {
+    @extend %shb-header-logo;
+  }
+
+  .shb-right-header {
+    @extend %shb-right-header;
+  }
+
+  .shb-cart-widget {
+    @extend %shb-cart-widget;
+  }
+
+  .shb-navbar {
+    background-color: $header-navbar-light-background;
+
+    a {
+      color: $header-navbar-light-links-color;
+    }
+
+    .shb-border-top {
+      border-top: 1px solid $header-border-color;
+    }
+
+    #mobileNav {
+      @extend %shb-mobile-nav;
+    }
+
+    #mainNav {
+      .shb-nav-item {
+        @extend %shb-nav-item;
+
+        > a {
+          border-bottom: 2px solid transparent;
+          padding-bottom: 1px;
+
+          &:hover {
+            border-bottom-color: $header-navbar-light-links-color;
+          }
+        }
+
+        &.active {
+          > a {
+            border-bottom-color: $header-navbar-light-links-color;
+          }
+        }
+
+        .shb-submenu {
+          background-color: $header-navbar-light-background;
+        }
+      }
+    }
+
+    &.is-sticky {
+      @extend %is-sticky;
+    }
+  }
+}

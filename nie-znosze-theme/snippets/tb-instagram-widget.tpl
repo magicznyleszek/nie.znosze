@@ -1,0 +1,3 @@
+<!-- InstagramWidget --><link href="//instagram.shoploapp.com/bundles/instagram/css/front.css" rel="stylesheet" type="text/css"  media="all"  />
+<div id="instagramGalleryWidgetWrapper" app-token="f24e6b600771d11189a821846d61e296" gallery-id="b0ed59e4-5a28-485b-972a-a1209db83c38" shop-id="110196"><div id="instagramGalleryWidget"></div></div>
+<script src="//instagram.shoploapp.com/js/0dcbdaa_part_2.js"></script><!-- InstagramWidget -->
