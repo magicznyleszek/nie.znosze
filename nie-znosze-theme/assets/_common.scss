@@ -410,6 +410,7 @@ $gap: 10px !default;
 $tablet: 769px !default;
 // 960px container + 4rem
 $desktop: 1000px + (2 * $gap) !default;
+$halfdesktop: 500px + (2 * $gap) !default;
 // 1152px container + 4rem
 $widescreen: 1152px + (2 * $gap) !default;
 $widescreen-enabled: false !default;
@@ -476,7 +477,7 @@ $btn-letter-spacing: rem-calc(0.157);
 $label-font-size: $font-size-small;
 
 // Header
-$header-navbar-link-size: $font-size-normal;
+$header-navbar-link-size: $font-size-medium;
 $header-icon-size: $font-size-medium;
 $header-logo-size: $font-size-medium;
 $header-right-size: $font-size-small;
@@ -725,10 +726,10 @@ $header-navbar-links-color: $color-white;
   $header-navbar-links-color: $set__navbar__color;
 }
 
-$header-navbar-light-background: $color-white;
-@if variable-exists(set__navbar__background__color) {
-  $header-navbar-light-background: $set__navbar__background__color;
-}
+$header-navbar-light-background: transparent;
+// @if variable-exists(set__navbar__background__color) {
+//   $header-navbar-light-background: $set__navbar__background__color;
+// }
 
 $header-navbar-light-links-color: $charcoal-grey;
 @if variable-exists(set__navbar__color) {

@@ -1,0 +1,24 @@
+{
+  "name": "nie.znosze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-styles": "sass nie-znosze-theme/assets/styles.scss nie-znosze-theme/assets/styles.css",
+    "zip-styles": "zip -r nie.znosze.zip nie-znosze-theme",
+    "build": "npm run build-styles && npm run zip-styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicznyleszek/nie.znosze.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magicznyleszek/nie.znosze/issues"
+  },
+  "homepage": "https://github.com/magicznyleszek/nie.znosze#readme",
+  "dependencies": {
+    "sass": "^1.24.2"
+  }
+}

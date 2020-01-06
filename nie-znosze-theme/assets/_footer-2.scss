@@ -25,11 +25,7 @@
 
   .shb-footer-copyright {
     @extend %footer-copyright;
-    @extend %align-right;
-
-    @include until ($tablet) {
-      text-align: left;
-      margin: 0;
-    }
+    // @extend %align-right;
+    @extend %align-center;
   }
 }

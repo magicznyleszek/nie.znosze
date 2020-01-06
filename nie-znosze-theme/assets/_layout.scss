@@ -1805,6 +1805,12 @@ $tabs-toggle-link-active-color: $link-invert !default;
     max-width: none;
     width: auto;
   }
+
+  &.is-short {
+    max-width: $halfdesktop;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .is-vertical-paddingless {
@@ -1832,13 +1838,6 @@ $tabs-toggle-link-active-color: $link-invert !default;
   }
 }
 
-body.shb-bg-img {
-  @if variable-exists(set__bg_image_repeat) {
-    background-repeat: $set__bg_image_repeat;
-  }
-
-  @if variable-exists(set__bg_image_alignment) {
-    background-position: $set__bg_image_alignment;
-  }
+.full-page-card {
+  min-height: 100vh;
 }
-

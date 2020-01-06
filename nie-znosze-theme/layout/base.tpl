@@ -46,8 +46,17 @@
 		<meta property="og:site_name" content="{$shop->name}" />
 	{/if}
 	<!-- END FACEBOOK OG DATA -->
-
-	<link rel="shortcut icon" type="image/png" href='{"favicon.png"|asset_url}' />
+	
+	<link rel="apple-touch-icon" sizes="180x180" href='{"apple-touch-icon.png"|asset_url}'>
+	<link rel="icon" type="image/png" sizes="32x32" href='{"favicon-32x32.png"|asset_url}'>
+	<link rel="icon" type="image/png" sizes="16x16" href='{"favicon-16x16.png"|asset_url}'>
+	<link rel="manifest" href='{"site.webmanifest"|asset_url}'>
+	<link rel="mask-icon" href='{"safari-pinned-tab.svg"|asset_url}' color="#000000">
+	<link rel="shortcut icon" href='{"favicon.ico"|asset_url}'>
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="msapplication-config" content='{"browserconfig.xml"|asset_url}'>
+	<meta name="theme-color" content="#000000">
+	
 	{if $settings->set__font_headers == "'Lato', Helvetica, Arial, sans-serif" || $settings->set__font_default == "'Lato', Helvetica, Arial, sans-serif"}
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	{/if}
@@ -70,7 +79,15 @@
 		{hook position="cart_head_end"}
 	{/if}
 </head>
-<body id="page-{$template}" class="{if isset($collection)}{$collection->url}{/if}{if isset($category)}{$category->url}{/if} {if $settings->use_bg_image} shb-bg-img{/if}"{if $settings->use_bg_image} style="background-image: url('{{{$settings->bg_image_url}|asset_url}}')"{/if}>
+<body 
+	id="page-{$template}" 
+	class="{if isset($collection)}{$collection->url}{/if}{if isset($category)}{$category->url}{/if}"
+>
+
+{if $template == 'home' && $settings->use_bg_image}
+<div id="page-background" style="background-image: url('{{{$settings->bg_image_url}|asset_url}}')"></div>
+{/if}
+
 {if $settings->use_sliding_mobile_menu == '1'}
 {snippet file="mobile_menu"}
 {/if}
@@ -113,7 +130,7 @@
 <!-- header_2_1577566042244 -->
 {snippet file="search_widget"}
 <header class="shb-header-2">
-	<div class="container">
+	<div class="container is-short">
 		<div class="columns unsticky-after-this shb-header-top is-vertical-center is-vertical-marginless">
 			{if $settings->header_show_social}
 				<div class="column is-hidden-mobile">
@@ -204,8 +221,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="shb-navbar nav-bar-background-color nav-bar-top-border nav-bar-bottom-border align-center {if $settings->fixed_header == 1}sticky-bar sticky-after-this{/if}">
-		<div class="container shb-border-top">
+	<div class="shb-navbar nav-bar-top-border nav-bar-bottom-border align-center {if $settings->fixed_header == 1}sticky-bar sticky-after-this{/if}">
+		<div class="container is-short">
 			{snippet file="main_nav"}
 		</div>
 	</div>

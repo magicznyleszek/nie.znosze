@@ -17,7 +17,7 @@
   </div>
 </div>
 <nav id="mainNav" class="is-hidden-mobile">
-  <ul class="shb-list-inline">
+  <ul class="shb-list-exploded">
     {foreach from=$menulists->main_menu->links item="menu"}
       <li class="shb-nav-item{if ($template == 'category') && $menu->url|strpos:$category->url !== false} active
       {elseif $template == 'collection' && ($menu->url|strpos:$collection->url !== false)} active

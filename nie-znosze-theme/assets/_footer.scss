@@ -140,6 +140,6 @@
 %footer-copyright {
   @extend %copyright-base;
   font-size: $footer-copyrights-size;
-  text-transform: uppercase;
+  text-transform: lowercase;
   line-height: 1.3;
 }

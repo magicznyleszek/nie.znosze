@@ -2572,6 +2572,13 @@ a {
   }
 }
 
+.shb-list-exploded {
+  @extend %clear-list;
+  
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .shb-list-block {
   @extend %clear-list;
 
@@ -4253,6 +4260,8 @@ $selectric-small-border-color: $form-element-color-border;
   }
 }
 
+
+@import "background";
 
 @import "header";
 
