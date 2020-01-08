@@ -15,22 +15,6 @@
 
 <div class="shb-product-list-2 shb-category">
     <div class="container">
-
-        <header class="shb-list-page-header">
-            <div class="columns">
-                <div class="column is-12 align-center is-vertical-paddingless">
-                    <h1 {if !$settings->show_breadcrumbs}class="without-breadcrumbs"{/if} href="#navListMobile" id="navListMobileToggle">
-                        <span>
-                        {trans}store_theme_translations.shop{/trans}
-                        </span>
-                    </h1>
-                </div>
-            </div>
-        </header>
-        {if $settings->show_breadcrumbs}
-            {snippet file="breadcrumbs" center="true"}
-        {/if}
-
         <div class="container shb-filters is-hidden-mobile">
             <div class="columns">
                 {if $settings->category_2_show_categories_nav}
@@ -68,16 +52,22 @@
 
         <div class="container {$grid_class}">
             <div class="columns">
-                {paginate set=$all_products per_page=$settings->category_2_list_products_count}
                 <div class="column product-list">
-                    {assign var="products" value=$items}
-                    {if !$products}
+                    {if !$all_products}
                     <p class="align-center">{trans}store_theme_translations.no_products{/trans}</p>
                     {else}
                     <div class="columns is-mobile">
-                        {foreach from=$products item="p" name="list"}
+                        {foreach from=$all_products item="p" name="list"}
+
                         {assign var=productUrlName value="shop_product_within_category"}
-                        {assign var=productUrl value={reverse_url name=$productUrlName category_name=$page_set->url product_name=$p->url}}
+
+                        {assign var=productCategoryUrl value=""}
+                        {foreach from=$p->categories item="product_category"}
+                            {assign var=productCategoryUrl value={$product_category->url}}
+                        {/foreach}
+            
+                        {assign var=productUrl value={reverse_url name=$productUrlName category_name=$productCategoryUrl product_name=$p->url}}
+
                         <div class="{$product_col_class}">
                             {snippet file="product_view_1" img_with_sidebar=$home_show_sidebar}
                         </div>
@@ -86,10 +76,6 @@
                     {/if}
                 </div>
             </div>
-            {if $pager->is_pagination_need}
-                {snippet file="pagination"}
-            {/if}
-            {/paginate}
         </div>
     </div>
 </div>

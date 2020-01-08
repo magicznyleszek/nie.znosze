@@ -17,54 +17,6 @@
 
 <div class="shb-product-list-2 shb-category">
     <div class="container">
-
-        <header class="shb-list-page-header">
-            <div class="columns">
-                <div class="column is-12 align-center is-vertical-paddingless">
-                    <h1 {if !$settings->show_breadcrumbs}class="without-breadcrumbs"{/if} href="#navListMobile" id="navListMobileToggle">
-                        <span>
-                        {$showTitle = "{$page_type}_show_title"}
-                        {if $settings->{$showTitle}}
-                            {if $page_type == 'search'}
-                                {trans}store_theme_translations.search_title{/trans}
-                            {else}
-                                {$page_set->title}
-                            {/if}
-                        {/if}
-                        </span>
-                    </h1>
-                    {if $page_type == 'category'}
-                    {if $settings->category_show_description}
-                    <div class="shb-list-page-header-description column is-12-mobile is-8-tablet is-offset-2-tablet is-6-desktop is-offset-3-desktop  is-vertical-paddingless">
-                        {if $category->description}
-                        {$category->description}
-                        {/if}
-                    </div>
-                    {/if}
-                    {elseif $page_type == 'vendor'}
-                    {if $settings->vendor_show_description}
-                    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-                        {if $vendor->description}
-                        {$vendor->description}
-                        {/if}
-                    </div>
-                    {/if}
-                    {elseif $page_type == 'collection'}
-                    {if $settings->collection_show_description}
-                    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-                        {if $collection->description}
-                        {$collection->description}
-                        {/if}
-                    </div>
-                    {/if}
-                    {/if}
-                </div>
-            </div>
-        </header>
-        {if $settings->show_breadcrumbs}
-            {snippet file="breadcrumbs" center="true"}
-        {/if}
-
         <div class="container shb-filters is-hidden-mobile">
             <div class="columns">
                 {if $settings->category_2_show_categories_nav}
