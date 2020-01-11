@@ -3163,7 +3163,7 @@ select {
       }
 
       &.active {
-        border: 1px solid #9B9B9B;
+        border: 1px solid $charcoal-grey-dimmed;
         padding: rem-calc(7) rem-calc(12);
         margin: 0;
       }

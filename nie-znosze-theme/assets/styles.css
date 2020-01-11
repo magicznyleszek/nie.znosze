@@ -6044,7 +6044,7 @@ select.select-small {
   opacity: 0.3;
 }
 .shb-pagination ul li.active {
-  border: 1px solid #9B9B9B;
+  border: 1px solid rgba(44, 50, 56, 0.5);
   padding: 0.4375rem 0.75rem;
   margin: 0;
 }
