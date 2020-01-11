@@ -837,15 +837,8 @@ $banner-slider-dots-color: $color-white;
 
 // Product colors
 
-$product-color-price: $charcoal-grey-dimmed;
-@if variable-exists(set__product_price_color) {
-  $product-color-price: $set__product_price_color;
-}
-
-$product-color-price-old: #ced3d7;
-@if variable-exists(set__product_old_price_color) {
-  $product-color-price-old: $set__product_old_price_color;
-}
+$product-color-price: $charcoal-grey;
+$product-color-price-old: $charcoal-grey-dimmed;
 
 
 // Product page

@@ -7242,14 +7242,14 @@ html.shb-sliding-menu-open-right #page {
 
 .shb-product-3 .shb-product-price {
   font-size: 1.5rem;
-  color: #6f7982;
+  color: #2c3238;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
 .shb-product-3 .shb-product-price span.shb-old-price {
-  color: #ced3d7;
+  color: rgba(44, 50, 56, 0.5);
   text-decoration: line-through;
 }
 

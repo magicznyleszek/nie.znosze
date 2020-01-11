@@ -10,7 +10,10 @@
 {else}
 {assign filters_active 0}
 {/if}
-
+{if isset($page)}
+{assign min_price $page->price_min|money_without_currency}
+{assign max_price $page->price_max|money_without_currency}
+{/if}
 {assign var='all_products' value=$shop->all_products}
 
 <div class="shb-product-list-2 shb-category">
