@@ -551,13 +551,13 @@ a:not(.shb-btn) {
       figcaption {
         margin-top: 5px;
         font-size: $font-size-x-small;
-        color: $battleship-grey;
+        color: $charcoal-grey-dimmed;
       }
     }
 
     blockquote {
       font-size: $font-size-base;
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
       font-style: italic;
       position: relative;
       padding-left: rem-calc(15);
@@ -722,10 +722,10 @@ a:not(.shb-btn) {
   }
 
   .shb-article-text {
-    color: $color-black;
+    color: $charcoal-grey;
 
     a:not(.shb-btn) {
-      color: $color-black;
+      color: $charcoal-grey;
     }
 
     h3, p {
@@ -754,7 +754,7 @@ a:not(.shb-btn) {
       margin-top: rem-calc(6);
       display: block;
       font-size: $font-size-normal;
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
       line-height: 1.4;
     }
   }
@@ -764,7 +764,7 @@ a:not(.shb-btn) {
     display: block;
     margin-top: rem-calc(10);
     text-decoration: underline;
-    color: $color-black;
+    color: $charcoal-grey;
   }
 }
 
@@ -783,7 +783,7 @@ a:not(.shb-btn) {
 
     .shb-article-additional-info {
       font-size: $font-size-normal;
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
       line-height: 1.4;
     }
   }
@@ -871,13 +871,13 @@ a:not(.shb-btn) {
       figcaption {
         margin-top: 5px;
         font-size: $font-size-small;
-        color: $battleship-grey;
+        color: $charcoal-grey-dimmed;
       }
     }
 
     blockquote {
       font-size: $font-size-base;
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
       font-style: italic;
       position: relative;
       padding-left: rem-calc(15);
@@ -918,7 +918,7 @@ a:not(.shb-btn) {
         font-size: $font-size-normal;
 
         a {
-          color: $battleship-grey;
+          color: $charcoal-grey-dimmed;
           line-height: 1.4;
         }
       }
@@ -1004,7 +1004,7 @@ body {
 
   #tableHead {
     .shb-text {
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
       font-size: $font-size-small;
       line-height: rem-calc(25);
     }
@@ -1097,7 +1097,7 @@ body {
     .shb-icon-cart-blankslate {
       display: block;
       font-size: rem-calc(75);
-      color: $color-mercury;
+      color: currentColor;
     }
 
     p {
@@ -1194,7 +1194,7 @@ body {
     }
 
     .shb-cart-delivery-price {
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
     }
   }
 
@@ -1241,7 +1241,7 @@ body {
     p {
       font-size: $font-size-small;
       line-height: 2;
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
     }
   }
 
@@ -1249,7 +1249,7 @@ body {
     a, input {
       width: 40px;
       height: 40px;
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
     }
     a {
       border: 1px solid $color-athens-gray;
@@ -1284,7 +1284,7 @@ body {
   .shb-additional-info {
     margin-top: 10px;
     p {
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
       font-size: $font-size-small;
       line-height: 1.3;
       margin-bottom: rem-calc(5);
@@ -2678,6 +2678,10 @@ $dot-size: 15px;
 
 
 .shb-input {
+  @include placeholder() {
+    color: rgba($form-element-color-font, 0.5);
+  }
+  
   font-size: $font-size-small;
   color: $form-element-color-font;
   background-color: $form-element-color-background;
@@ -2686,19 +2690,6 @@ $dot-size: 15px;
   padding: 7px 10px;
   outline: none;
   border-radius: $globalElementsBorderRadius;
-
-  &::-webkit-input-placeholder {
-    color: $cool-grey;
-  }
-  &::-moz-placeholder {
-    color: $cool-grey;
-  }
-  &:-ms-input-placeholder {
-    color: $cool-grey;
-  }
-  &:-moz-placeholder {
-    color: $cool-grey;
-  }
 }
 
 .shb-input-large {
@@ -3908,7 +3899,7 @@ html {
             display: none;
           }
           li {
-            padding: 3px 8px;
+            padding: 3px 13px;
             display: block;
 
             a {
@@ -3998,14 +3989,14 @@ html {
 $selectric-main-color:      transparent !default;                                              // Color used in border
 $selectric-secondary-color: $form-element-color-font !default;                                              // Color used in button
 $selectric-text-color:      $form-element-color-font !default;                                              // Color used in label
-$selectric-bg-color:        $form-element-color-background !default;                                           // Background color
+$selectric-bg-color:        $color-white !default;                                           // Background color
 $selectric-height:          38px !default;                                              // Outer height
 $selectric-label-font-size: rem-calc(12);
 $selectric-spacing:         10px !default;                                              // Label left padding
 $selectric-border-width:    1px !default;                                               // Outer border width
 $selectric-inner-height:    $selectric-height !default; // Inner height
 
-$selectric-small-backgorund: $form-element-color-background;
+$selectric-small-backgorund: $color-white;
 $selectric-small-label-font-size: $font-size-small;
 $selectric-small-inner-height: 28px;
 $selectric-small-text-color: $form-element-color-font;

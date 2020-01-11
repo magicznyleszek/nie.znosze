@@ -20,7 +20,7 @@
                 {if $settings->category_2_show_categories_nav}
                 <div class="column is-9">
                     <div class="shb-categories-list-inline shb-list-inline">
-                        {$categories->createListView($page->url, 'categories', 'active')}
+                        {$categories->createListView('wszystkie', 'categories', 'active')}
                     </div>
                 </div>
                 {/if}
@@ -30,7 +30,7 @@
                         <span>
                             {trans}store_theme_translations.sort{/trans}:
                         </span>
-                        <select class="select select-small transparent-label" name="sort">
+                        <select class="select select-small" name="sort">
                             <option value="0">{trans}store_theme_translations.no_filters{/trans}</option>
                             <option value="sort=price">{trans}store_theme_translations.from_cheapest{/trans}</option>
                             <option value="sort=price&order=desc">{trans}store_theme_translations.from_most_expensive{/trans}</option>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="shb-mobile-filters-wrapper is-hidden-tablet">
-            <a href="#filtersMobile" id="filtersMobileToggle" class="shb-btn shb-btn-light shb-btn-large shb-btn-with-icon shb-btn-full-width">
+            <a href="#filtersMobile" id="filtersMobileToggle" class="shb-btn shb-btn-dark shb-btn-large shb-btn-with-icon shb-btn-full-width">
                 {trans}store_theme_translations.filter{/trans}
             </a>
             {snippet file="active_filters"}

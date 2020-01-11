@@ -272,7 +272,7 @@
       </div>
       {/if}
       <div class="column is-12-mobile is-3-desktop {if !$settings->show_ft_menu_1}is-9-desktop{/if} {if !$settings->show_ft_menu_1 && !$settings->footer_show_social}is-12-desktop{/if}">
-        <p class="shb-footer-copyright">Copyright &copy; {$smarty.now|date_format:"%Y"} {$shop->name} <a
+        <p class="shb-footer-copyright">Copyright &copy; {$smarty.now|date_format:"%Y"} {$shop->name} &middot; <a
                 title="Sprawdź najprostszy sposób sprzedaży w internecie"
                 href="https://www.shoplo.pl/?utm_source={$shop->permanent_domain}&utm_medium=referral&utm_campaign=shoplo-store-footer" rel="noopener"
                 target="_blank" class="push-right">{trans}store_theme_translations.internet_shops{/trans} Shoplo</a></p>

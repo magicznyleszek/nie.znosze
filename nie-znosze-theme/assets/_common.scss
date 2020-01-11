@@ -535,9 +535,8 @@ $categories-menu-size: $font-size-small;
 $clear-all-filters-size: $font-size-small;
 
 $charcoal-grey: #2c3238;
-$battleship-grey: #6f7982;
+$charcoal-grey-dimmed: rgba($charcoal-grey, 0.5);
 $cool-grey: #b1b6bb;
-$color-mercury: #e5e5e5;
 $color-athens-gray: #e4e7eb;
 $color-alabaster: #f7f7f7;
 $color-alto: #d7d7d7;
@@ -548,19 +547,10 @@ $color-red: #e24a4a;
 
 // Base
 $global-links-color: $charcoal-grey;
-@if variable-exists(set__content_link_color) {
-  $global-links-color: $set__content_link_color;
-}
 
 $global-links-hover-color: $color-black;
-@if variable-exists(set__content_link_hover_color) {
-  $global-links-hover-color: $set__content_link_hover_color;
-}
 
-$body-background-color: #ffffff;
-@if variable-exists(set__page_background_color) {
-  $body-background-color: $set__page_background_color;
-}
+$body-background-color: #aca68d;
 
 $body-background-image-repeat: 'no-repeat';
 @if variable-exists(set__bg_image_repeat) {
@@ -574,41 +564,16 @@ $body-background-image-alignment: 'center';
 
 
 $font-color-base: $charcoal-grey;
-@if variable-exists(set__page_font_color) {
-  $font-color-base: $set__page_font_color;
-}
 
 
 $font-heading-color-base: $charcoal-grey;
-@if variable-exists(set__page_headers_font_color) {
-  $font-heading-color-base: $set__page_headers_font_color;
-}
 
 // Form elements
 $form-element-color-font: $charcoal-grey;
-@if variable-exists(set__form_element_font_color) {
-  $form-element-color-font: $set__form_element_font_color;
-}
-
-$form-element-color-background: $color-white;
-@if variable-exists(set__form_element_background_color) {
-  $form-element-color-background: $set__form_element_background_color;
-}
-
-$form-element-color-border: $color-athens-gray;
-@if variable-exists(set__form_element_border_color) {
-  $form-element-color-border: $set__form_element_border_color;
-}
-
-$form-element-active-color-font: $charcoal-grey;
-@if variable-exists(set__form_element_active_font_color) {
-  $form-element-active-color-font: $set__form_element_active_font_color;
-}
-
+$form-element-color-background: transparent;
+$form-element-color-border: $charcoal-grey;
+$form-element-active-color-font: $color-black;
 $form-element-active-color: $color-athens-gray;
-@if variable-exists(form_element_active_border_color) {
-  $form-element-active-color: $set__form_element_active_color;
-}
 
 // Buttons
 $btn-light-color: $charcoal-grey;
@@ -761,11 +726,11 @@ $footer-background: $color-white;
   $footer-background: $set__footer__background__color;
 }
 
-$footer-logo-color: $battleship-grey;
+$footer-logo-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__logo__color) {
   $footer-logo-color: $set__footer__logo__color;
 }
-$footer-logo-hover-color: $battleship-grey;
+$footer-logo-hover-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__logo__hover__color) {
   $footer-logo-hover-color: $set__footer__logo__hover__color;
 }
@@ -773,11 +738,11 @@ $footer-logo-light-color:  $color-white;
 @if variable-exists(set__footer__logo__light__color) {
   $footer-logo-light-color: $set__footer__logo__light__color;
 }
-$footer-logo-hover-light-color: $battleship-grey;
+$footer-logo-hover-light-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__logo__hover__light__color) {
   $footer-logo-hover-light-color: $set__footer__logo__hover__light__color;
 }
-$footer-menu-label-color: $battleship-grey;
+$footer-menu-label-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__menu__label__color) {
   $footer-menu-label-color: $set__footer__menu__label__color;
 }
@@ -787,11 +752,11 @@ $footer-menu-label-light-color: $color-white;
 }
 
 
-$footer-menu-links-color: $battleship-grey;
+$footer-menu-links-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__menu__links__color) {
   $footer-menu-links-color: $set__footer__menu__links__color;
 }
-$footer-menu-links-hover-color: $battleship-grey;
+$footer-menu-links-hover-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__menu__links__hover__color) {
   $footer-menu-links-hover-color: $set__footer__menu__links__hover__color;
 }
@@ -799,19 +764,19 @@ $footer-menu-links-light-color: $color-white;
 @if variable-exists(set__footer__menu__links__light__color) {
   $footer-menu-links-light-color: $set__footer__menu__links__light__color;
 }
-$footer-menu-links-hover-light-color: $battleship-grey;
+$footer-menu-links-hover-light-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__menu__links__hover__light__color) {
   $footer-menu-links-hover-light-color: $set__footer__menu__links__hover__light__color;
 }
-$footer-copyrights-color: $battleship-grey;
+$footer-copyrights-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__copyrights__color) {
   $footer-copyrights-color: $set__footer__copyrights__color;
 }
-$footer-copyrights-links-color: $battleship-grey;
+$footer-copyrights-links-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__copyrights__link__color) {
   $footer-copyrights-links-color: $set__footer__copyrights__link__color;
 }
-$footer-copyrights-links-hover-color: $battleship-grey;
+$footer-copyrights-links-hover-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__copyrights__links__hover__color) {
   $footer-copyrights-links-hover-color: $set__footer__copyrights__links__hover__color;
 }
@@ -823,7 +788,7 @@ $footer-copyrights-links-light-color: $color-white;
 @if variable-exists(set__footer__copyrights__links__light__color) {
   $footer-copyrights-links-light-color: $set__footer__copyrights__links__light__color;
 }
-$footer-copyrights-links-hover-light-color: $battleship-grey;
+$footer-copyrights-links-hover-light-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__copyrights__links__hover__light__color) {
   $footer-copyrights-links-hover-light-color: $set__footer__copyrights__links__hover__light__color;
 }
@@ -833,7 +798,7 @@ $social-links-color: $charcoal-grey;
 @if variable-exists(set__footer__social__links__color) {
   $social-links-color: $set__footer__social__links__color;
 }
-$social-links-hover-color: $battleship-grey;
+$social-links-hover-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__social__links__hover__color) {
   $social-links-hover-color: $set__footer__social__links__hover__color;
 }
@@ -841,7 +806,7 @@ $social-links-light-color: $color-white;
 @if variable-exists(set__footer__social__links__light__color) {
   $social-links-light-color: $set__footer__social__links__light__color;
 }
-$social-links-hover-light-color: $battleship-grey;
+$social-links-hover-light-color: $charcoal-grey-dimmed;
 @if variable-exists(set__footer__social__links__hover__light__color) {
   $social-links-hover-light-color: $set__footer__social__links__hover__light__color;
 }
@@ -858,7 +823,7 @@ $social-links-hover-light-color: $battleship-grey;
 $blankslate-banner-background: $color-alabaster;
 $blankslate-banner-icon-color: $color-alto;
 $blankslate-banner-header-color: $color-black;
-$blankslate-banner-description-color: $battleship-grey;
+$blankslate-banner-description-color: $charcoal-grey-dimmed;
 
 $banner-slider-arrows-color: $color-black;
 @if variable-exists(set__banner_arrows_color) {
@@ -872,7 +837,7 @@ $banner-slider-dots-color: $color-white;
 
 // Product colors
 
-$product-color-price: $battleship-grey;
+$product-color-price: $charcoal-grey-dimmed;
 @if variable-exists(set__product_price_color) {
   $product-color-price: $set__product_price_color;
 }
@@ -949,15 +914,15 @@ $separator-line-color: $color-athens-gray;
 
 // Breadcrumbs
 $breadcrumb-item-color: $cool-grey !default;
-$breadcrumb-item-hover-color: $battleship-grey !default;
+$breadcrumb-item-hover-color: $charcoal-grey-dimmed !default;
 $breadcrumb-item-active-color: $cool-grey !default;
 $breadcrumb-item-separator-color: $cool-grey !default;
 
 // Tabs
 $tabs-link-color: $cool-grey !default;
-$tabs-link-hover-color: $battleship-grey !default;
-$tabs-link-active-border-bottom-color: $battleship-grey !default;
-$tabs-link-active-color: $battleship-grey !default;
+$tabs-link-hover-color: $charcoal-grey-dimmed !default;
+$tabs-link-active-border-bottom-color: $charcoal-grey-dimmed !default;
+$tabs-link-active-color: $charcoal-grey-dimmed !default;
 $tabs-border-color: $color-athens-gray !default;
 
 @if variable-exists(set__tabs__link__color) {
@@ -1020,13 +985,13 @@ $cart-widget-color: $charcoal-grey;
   $cart-widget-color: $set__cart_widget_text_color;
 }
 
-$cart-widget-secondary-color: $battleship-grey;
+$cart-widget-secondary-color: $charcoal-grey-dimmed;
 @if variable-exists(set__cart_widget_text_secondary_color) {
   $cart-widget-secondary-color: $set__cart_widget_text_secondary_color;
 }
 
 // Cart
-$cart-item-border: $color-athens-gray;
+$cart-item-border: $charcoal-grey;
 
 // Notification
 $notification-success-background: green;
@@ -1046,20 +1011,20 @@ $search-widget-color: $charcoal-grey;
   $search-widget-color: $set__search_widget_text_color;
 }
 
-$search-widget-secondary-color: $battleship-grey;
+$search-widget-secondary-color: $charcoal-grey-dimmed;
 @if variable-exists(set__search_widget_text_secondary_color) {
   $search-widget-secondary-color: $set__search_widget_text_secondary_color;
 }
 
 // Categories menu inline (product list view 2)
 $categories-menu-color: $charcoal-grey;
-$categories-menu-hover-color: $battleship-grey;
+$categories-menu-hover-color: $color-black;
 $categories-menu-active-color: $charcoal-grey;
 
 // List view 3
 $list-view-3-filters-border-color: $color-athens-gray;
 $clear-all-filters-color: $charcoal-grey;
-$clear-all-filters-hover-color: $battleship-grey;
+$clear-all-filters-hover-color: $charcoal-grey-dimmed;
 
 
 // Colors

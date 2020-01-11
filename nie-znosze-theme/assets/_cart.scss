@@ -9,7 +9,7 @@
     margin-top: 5px;
     font-size: $font-size-small;
     line-height: 2;
-    color: $battleship-grey;
+    color: $charcoal-grey-dimmed;
   }
 }
 
@@ -18,7 +18,7 @@
   line-height: 1.8;
 
   .shb-cart-delivery-price {
-    color: $battleship-grey;
+    color: $charcoal-grey-dimmed;
   }
 }
 
@@ -60,16 +60,16 @@
     a, input {
       width: 40px;
       height: 40px;
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
     }
 
     a {
-      border: 1px solid $color-athens-gray;
+      border: 1px solid $charcoal-grey;
       cursor: pointer;
     }
 
     input {
-      border-color: $color-athens-gray;
+      border-color: $charcoal-grey;
       padding: 10px;
       margin: 0 5px;
     }
@@ -80,7 +80,7 @@
     margin-top: 5px;
 
     li {
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
       font-size: $font-size-small;
       line-height: 1.5;
     }
@@ -113,7 +113,7 @@
 
   .shb-table-head {
     .shb-text {
-      color: $battleship-grey;
+      color: $charcoal-grey-dimmed;
       font-size: $font-size-small;
       line-height: rem-calc(25);
     }
@@ -124,7 +124,7 @@
   margin-top: rem-calc(5);
   p {
     font-size: $font-size-small;
-    color: $battleship-grey;
+    color: $charcoal-grey-dimmed;
     margin-top: rem-calc(5);
     line-height: 1.33;
 
@@ -151,7 +151,7 @@
     display: block;
     font-size: rem-calc(135);
     margin-bottom: rem-calc(27);
-    color: $color-mercury;
+    color: currentColor;
   }
 
   p {
