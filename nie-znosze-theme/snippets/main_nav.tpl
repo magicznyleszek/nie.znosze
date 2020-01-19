@@ -26,6 +26,11 @@
       {elseif isset($product) and $product_url == $menu->url} active
       {elseif $template == 'home'}{if $menu->url == '/'} active{/if}{/if}">
         <a href="{$menu->url}">{$menu->title}</a>
+
+        {if ($menu->url == '/kolekcja/glowna')}
+            {snippet file="categories_nav"}
+        {/if}
+
         {if $menulists->{$menu->title|lower|replace:$langletters:$letters}->links|count > 0}
           <ul class="shb-submenu shb-list-block">
             {foreach $menulists->{$menu->title|lower|replace:$langletters:$letters}->links item="submenu"}

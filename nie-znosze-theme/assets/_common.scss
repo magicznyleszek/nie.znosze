@@ -586,7 +586,7 @@ $btn-light-background: $color-white;
   $btn-light-background: $set__light_button_background;
 }
 
-$btn-light-border: $charcoal-grey;
+$btn-light-border: $color-white;
 @if variable-exists(set__light_button_border) {
   $btn-light-border: $set__light_button_border;
 }
@@ -601,7 +601,7 @@ $btn-light-active-background: $charcoal-grey;
   $btn-light-active-background: $set__light_button_active_background;
 }
 
-$btn-light-active-border: $charcoal-grey;
+$btn-light-active-border: $color-white;
 @if variable-exists(set__light_button_active_border) {
   $btn-light-active-border: $set__light_button_active_border;
 }
@@ -1642,5 +1642,3 @@ $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
     top: $offset;
   }
 }
-
-
