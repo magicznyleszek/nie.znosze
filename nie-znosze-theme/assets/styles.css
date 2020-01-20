@@ -7180,6 +7180,11 @@ html.shb-sliding-menu-open-right #page {
 .shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list > .categories-nav__item > a {
   font-weight: 800;
 }
+.shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--active > a {
+  background-color: rgba(172, 166, 141, 0.2);
+  border-radius: 2px;
+}
+
 .shb-footer-2 .shb-footer-nav a {
   color: #2c3238;
 }

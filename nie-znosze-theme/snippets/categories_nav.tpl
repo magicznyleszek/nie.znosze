@@ -1,14 +1,14 @@
 <nav class="categories-nav">
     <ul class="categories-nav__list">
-    {foreach from=$categories->all item="category"}
-    {if $category->top_category}
-        <li class="categories-nav__item">
-            {$category->title|link_to_category}
+    {foreach from=$categories->all item="main_category"}
+    {if $main_category->top_category}
+        <li class="categories-nav__item {if isset($category) and $category->id == $main_category->id}categories-nav__item--active{/if}">
+            {$main_category->title|link_to_category}
 
-            {if $category->has_children}
+            {if $main_category->has_children}
             <ul class="categories-nav__sublist">
-            {foreach from=$category->childs item="child_category"}
-                <li class="categories-nav__subitem">
+            {foreach from=$main_category->childs item="child_category"}
+                <li class="categories-nav__item {if isset($category) and $category->id == $child_category->id}categories-nav__item--active{/if}">
                     {$child_category->title|link_to_category}
                 </li>
             {/foreach}
