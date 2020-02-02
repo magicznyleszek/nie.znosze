@@ -544,6 +544,8 @@ $color-white: #fff;
 $color-black: #000;
 $color-red: #e24a4a;
 
+$color-green-dimmed: #395f41;
+
 
 // Base
 $global-links-color: $charcoal-grey;
@@ -987,7 +989,7 @@ $cart-widget-secondary-color: $charcoal-grey-dimmed;
 $cart-item-border: $charcoal-grey;
 
 // Notification
-$notification-success-background: green;
+$notification-success-background: $color-green-dimmed;
 $notification-error-background: $color-red;
 $notification-color: $color-white;
 

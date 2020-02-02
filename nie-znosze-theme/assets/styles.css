@@ -4130,7 +4130,7 @@ body.shb-show-cart-widget #cartWidgetBottom {
   margin-top: 10px;
 }
 .shb-sliding-cart-widget .shb-cart-msg.success {
-  background: green;
+  background: #395f41;
 }
 .shb-sliding-cart-widget .shb-cart-msg.error {
   background: #e24a4a;
@@ -5617,7 +5617,7 @@ a {
   padding: 15px 0;
 }
 #shbNotification.success {
-  background: green;
+  background: #395f41;
 }
 #shbNotification.error {
   background: #e24a4a;
