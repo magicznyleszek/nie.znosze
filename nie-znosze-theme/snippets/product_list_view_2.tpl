@@ -32,7 +32,7 @@
                         <span>
                             {trans}store_theme_translations.sort{/trans}:
                         </span>
-                        <select class="select select-small" name="sort">
+                        <select class="select select-small transparent-label" name="sort">
                             <option value="0">{trans}store_theme_translations.no_filters{/trans}</option>
                             <option value="sort=price">{trans}store_theme_translations.from_cheapest{/trans}</option>
                             <option value="sort=price&order=desc">{trans}store_theme_translations.from_most_expensive{/trans}</option>

@@ -1727,7 +1727,7 @@ body {
 
 $padding-ratio-square: 100%;
 $padding-ratio-horizontal: 57%;
-$padding-ratio-vertical: 120%;
+$padding-ratio-vertical: 140%;
 
 .shb-product-list-item {
   display: block;
@@ -2574,7 +2574,7 @@ a {
 
 .shb-list-exploded {
   @extend %clear-list;
-  
+
   display: flex;
   justify-content: space-evenly;
 }
@@ -2681,7 +2681,7 @@ $dot-size: 15px;
   @include placeholder() {
     color: rgba($form-element-color-font, 0.5);
   }
-  
+
   font-size: $font-size-small;
   color: $form-element-color-font;
   background-color: $form-element-color-background;
@@ -3469,7 +3469,7 @@ select {
         }
 
         a {
-          line-height: 2rem;
+          line-height: 1.5rem;
           position: relative;
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -3477,7 +3477,7 @@ select {
           text-transform: uppercase;
           color: inherit;
           display: block;
-          padding: 10px 10px 10px 20px;
+          padding: 5px 10px 5px 20px;
           margin: 0;
           font-size: rem-calc(14);
           -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
@@ -4015,18 +4015,14 @@ $selectric-small-border-color: $form-element-color-border;
 
 .selectric-transparent-label {
   .selectric {
-    background: transparent;
-    border-color: transparent;
-    .label {
-      margin-left: 0;
-    }
+    background-color: transparent;
   }
 }
 
 .selectric-select-small {
   &.selectric-transparent-label {
     .selectric {
-      border-color: transparent;
+      background-color: transparent;
     }
   }
   .selectric {
@@ -4270,3 +4266,4 @@ $selectric-small-border-color: $form-element-color-border;
 
 @import "cart-2";
 
+@import "categories-nav"

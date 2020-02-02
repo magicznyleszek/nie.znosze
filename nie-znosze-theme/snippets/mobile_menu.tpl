@@ -32,12 +32,11 @@
                                 {elseif $template == 'home'}{if $menu->url == '/'} active{/if}{/if}{if $menu_has_dropdown} has-dropdown{/if}">
                     <a href="{$menu->url}">
                         {$menu->title}
-                        {if $menulists->{$menu->title|lower|replace:$langletters:$letters}->links|count > 0}
-                        {$submenuIndex = $submenuIndex+1}
-                        {append var='submenus' value=$menulists->{$menu->title|lower|replace:$langletters:$letters} index=$submenuIndex}
-                        <span shb-sliding-menu-show-submenu="{$submenuIndex}" class="shb-menu-next"><i class="shb-icon shb-icon-next"></i></span>
-                        {/if}
                     </a>
+
+                    {if ($menu->url == '/kolekcja/glowna')}
+                        {snippet file="categories_nav"}
+                    {/if}
                 </li>
                 {/foreach}
             </ul>
