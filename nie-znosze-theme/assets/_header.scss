@@ -17,15 +17,25 @@
 
   a {
     color: $header-links-color;
-  }
+    display: block;
 
-  img {
-    $logo-height: 60px;
-    @if variable_exists(set__logo_img_size) {
-      $logo-height: calc(#{$set__logo_img_size} * #{$logo-height});
+    &:hover img {
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+      transition: all 0.25s;
     }
 
-    height: $logo-height;
+    img {
+      $logo-height: 60px;
+      @if variable_exists(set__logo_img_size) {
+        $logo-height: calc(#{$set__logo_img_size} * #{$logo-height});
+      }
+
+      height: $logo-height;
+      // circle shadow for white background
+      border-radius: 50%;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      transition: all 0.25s;
+    }
   }
 }
 
