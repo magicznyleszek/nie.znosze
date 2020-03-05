@@ -31,6 +31,10 @@
             {snippet file="categories_nav"}
         {/if}
 
+        {if ($menu->url == '/strona/o-nas')}
+            {snippet file="sub_nav" target_menu="onas_menu"}
+        {/if}
+
         {if $menulists->{$menu->title|lower|replace:$langletters:$letters}->links|count > 0}
           <ul class="shb-submenu shb-list-block">
             {foreach $menulists->{$menu->title|lower|replace:$langletters:$letters}->links item="submenu"}

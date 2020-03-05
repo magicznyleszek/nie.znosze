@@ -240,45 +240,51 @@
 <!-- ### FOOTER ### --><!-- footer_2_1572469632926 -->
 <footer class="shb-footer-2">
   <div class="container">
+    {if $settings->footer_show_social}
     <div class="columns is-vertical-center">
-      {if $settings->footer_show_social}
-      <div class="column is-12-mobile is-3-desktop">
-        <div class="shb-footer-social">
-          {if $settings->show_facebook}
-          <a href="{$settings->facebook_url}" aria-label="Facebook" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-facebook"></a>
-          {/if}
-          {if $settings->show_twitter}
-          <a href="{$settings->twitter_url}" aria-label="Twitter" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-twitter"></a>
-          {/if}
-          {if $settings->show_instagram}
-          <a href="{$settings->instagram_url}" aria-label="Instagram" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-instagram-circle"></a>
-          {/if}
-          {if $settings->show_pinterest}
-          <a href="{$settings->pinterest_url}" aria-label="Pinterest" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-pinterest"></a>
-          {/if}
-          {if $settings->show_youtube}
-            <a href="{$settings->youtube_url}" aria-label="YouTube" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-youtube-circle"></a>
-          {/if}
+        <div class="column">
+          <div class="shb-footer-social">
+            {if $settings->show_facebook}
+            <a href="{$settings->facebook_url}" aria-label="Facebook" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-facebook"></a>
+            {/if}
+            {if $settings->show_twitter}
+            <a href="{$settings->twitter_url}" aria-label="Twitter" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-twitter"></a>
+            {/if}
+            {if $settings->show_instagram}
+            <a href="{$settings->instagram_url}" aria-label="Instagram" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-instagram-circle"></a>
+            {/if}
+            {if $settings->show_pinterest}
+            <a href="{$settings->pinterest_url}" aria-label="Pinterest" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-pinterest"></a>
+            {/if}
+            {if $settings->show_youtube}
+              <a href="{$settings->youtube_url}" aria-label="YouTube" target="_blank" rel="noopener nofolow" class="shb-icon shb-icon-youtube-circle"></a>
+            {/if}
+          </div>
         </div>
-      </div>
-      {/if}
-      {if $settings->show_ft_menu_1 && $settings->ft_menu_1 != ""}
-      <div class="column is-12-mobile is-6-desktop {if !$settings->footer_show_social}is-offset-3-desktop{/if}">
+    </div>
+    {/if}
+
+    {if $settings->show_ft_menu_1 && $settings->ft_menu_1 != ""}
+    <div class="columns is-vertical-center">
+      <div class="column">
         <ul class="shb-footer-nav">
           {foreach from=$menulists->{$settings->ft_menu_1}->links item="menu"}
           <li><a href="{$menu->url}">{$menu->title}</a></li>
           {/foreach}
         </ul>
       </div>
-      {/if}
-      <div class="column is-12-mobile is-3-desktop {if !$settings->show_ft_menu_1}is-9-desktop{/if} {if !$settings->show_ft_menu_1 && !$settings->footer_show_social}is-12-desktop{/if}">
+    </div>
+    {/if}
+
+    <div class="columns is-vertical-center">
+      <div class="column">
         <p class="shb-footer-copyright">
             Copyright &copy; {$smarty.now|date_format:"%Y"} {$shop->name}
             &hearts;
             <a
                 title="Sprawdź najprostszy sposób sprzedaży w internecie"
                 href="https://www.shoplo.pl/?utm_source={$shop->permanent_domain}&utm_medium=referral&utm_campaign=shoplo-store-footer"
-				rel="noopener"
+                rel="noopener"
                 target="_blank"
             >
                 Shoplo

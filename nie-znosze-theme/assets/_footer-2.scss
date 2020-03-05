@@ -1,5 +1,8 @@
 .shb-footer-2 {
   //@extend %footer;
+
+  margin: 3rem auto;
+
   .shb-footer-social {
     @extend %social-links;
 
@@ -27,6 +30,5 @@
     @extend %footer-copyright;
     // @extend %align-right;
     @extend %align-center;
-    margin: 3rem auto;
   }
 }

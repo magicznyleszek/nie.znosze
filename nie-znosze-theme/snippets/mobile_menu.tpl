@@ -37,6 +37,10 @@
                     {if ($menu->url == '/kolekcja/glowna')}
                         {snippet file="categories_nav"}
                     {/if}
+
+                    {if ($menu->url == '/strona/o-nas')}
+                        {snippet file="sub_nav" target_menu="onas_menu"}
+                    {/if}
                 </li>
                 {/foreach}
             </ul>

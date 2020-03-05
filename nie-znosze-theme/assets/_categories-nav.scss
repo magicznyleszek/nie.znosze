@@ -42,6 +42,16 @@
         flex-direction: row;
         text-align: left;
 
+        &.categories-nav__list--vertical {
+            flex-direction: column;
+            padding: 10px;
+
+            > .categories-nav__item {
+                padding: 0;
+                min-width: auto;
+            }
+        }
+
         > .categories-nav__item {
             padding: 10px;
             min-width: 100px;
