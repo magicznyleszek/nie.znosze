@@ -14,16 +14,6 @@
   .shb-footer-nav {
     @extend %footer-menu;
     @extend %footer-menu-horizontal;
-
-    @include until ($tablet) {
-      justify-content: left;
-      padding-bottom: 0;
-      padding-top: 0;
-    > li:first-child {
-      padding-left: 0;
-    }
-    }
-
   }
 
   .shb-footer-copyright {

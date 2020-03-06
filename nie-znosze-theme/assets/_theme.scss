@@ -3051,10 +3051,12 @@ $shb-label-padding-horizontal: 7px;
 //$size, $color, $background, $padding-vertical: 7px, $padding-horizontal: 3px
 .shb-product-list-label-sale {
   @include label($label-font-size, $label-color, $label-sell-background);
+  pointer-events: none;
 }
 
 .shb-product-list-label-sold {
   @include label($label-font-size, $label-color, $label-sold-background);
+  pointer-events: none;
 }
 
 .shb-black-label {
@@ -3232,11 +3234,15 @@ select {
         }
 
         &.prev {
-          margin-right: rem-calc(48);
+          @include from($tablet) {
+            margin-right: rem-calc(48);
+          }
         }
 
         &.next {
-          margin-left: rem-calc(48);
+          @include from($tablet) {
+            margin-left: rem-calc(48);
+          }
         }
       }
     }

@@ -3,6 +3,10 @@
 
   .shb-header-top {
     @extend %shb-header-top;
+
+    @include mobile() {
+      margin: 0;
+    }
   }
 
   .shb-header-social {

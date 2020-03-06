@@ -5876,7 +5876,7 @@ img.responsively-lazy {
 }
 
 .shb-product-list-label-sale {
-  background: #4a90e2;
+  background: #2c3238;
   border-radius: 2px;
   color: #fff;
   display: block;
@@ -5886,6 +5886,7 @@ img.responsively-lazy {
   padding: 3px 7px;
   text-align: center;
   text-transform: uppercase;
+  pointer-events: none;
 }
 @media screen and (max-width: 768px) {
   .shb-product-list-label-sale {
@@ -5895,7 +5896,7 @@ img.responsively-lazy {
 }
 
 .shb-product-list-label-sold {
-  background: #f5a623;
+  background: #b5495a;
   border-radius: 2px;
   color: #fff;
   display: block;
@@ -5905,6 +5906,7 @@ img.responsively-lazy {
   padding: 3px 7px;
   text-align: center;
   text-transform: uppercase;
+  pointer-events: none;
 }
 @media screen and (max-width: 768px) {
   .shb-product-list-label-sold {
@@ -6086,11 +6088,15 @@ select.select-small {
 .shb-pagination.shb-pagination-show-pages ul li.page, .shb-pagination.shb-pagination-show-pages ul li.break {
   display: inline-block;
 }
-.shb-pagination.shb-pagination-show-pages ul li.prev {
-  margin-right: 3rem;
+@media screen and (min-width: 769px) {
+  .shb-pagination.shb-pagination-show-pages ul li.prev {
+    margin-right: 3rem;
+  }
 }
-.shb-pagination.shb-pagination-show-pages ul li.next {
-  margin-left: 3rem;
+@media screen and (min-width: 769px) {
+  .shb-pagination.shb-pagination-show-pages ul li.next {
+    margin-left: 3rem;
+  }
 }
 .shb-pagination.shb-pagination-with-labels ul li.prev {
   padding: 0.4375rem 10px;
@@ -7117,6 +7123,11 @@ html.shb-sliding-menu-open-right #page {
   margin-top: 1.25rem;
 }
 
+@media screen and (max-width: 768px) {
+  .shb-header-2 .shb-header-top {
+    margin: 0;
+  }
+}
 .shb-header-2 .shb-header-social li {
   margin-right: 7px;
 }
@@ -7185,16 +7196,6 @@ html.shb-sliding-menu-open-right #page {
 
 .shb-footer-2 {
   margin: 3rem auto;
-}
-@media screen and (max-width: 768px) {
-  .shb-footer-2 .shb-footer-nav {
-    justify-content: left;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-  .shb-footer-2 .shb-footer-nav > li:first-child {
-    padding-left: 0;
-  }
 }
 .shb-product-3 h2 + h1 {
   margin-top: 10px;

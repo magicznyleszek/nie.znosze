@@ -4,7 +4,10 @@ root = true
 [*.{es6,js,coffee,scss,css,html,tpl}]
 charset = utf-8
 end_of_line = lf
-indent_size = 4
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+[*.{es6,js,coffee,html,tpl}]
+indent_size = 4
+[*.{scss,css}]
+indent_size = 2

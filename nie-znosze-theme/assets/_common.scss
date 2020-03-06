@@ -646,15 +646,9 @@ $btn-disabled-border-color: $color-alto;
 $label-color: $color-white;
 $label-black-background: $charcoal-grey;
 
-$label-sell-background: #4a90e2;
-@if variable-exists(set__promotion__label__color) {
-  $label-sell-background: $set__promotion__label__color;
-}
+$label-sell-background: $charcoal-grey;
 
-$label-sold-background: #f5a623;
-@if variable-exists(set__sold__out__label__color) {
-  $label-sold-background: $set__sold__out__label__color;
-}
+$label-sold-background: #b5495a;
 
 // Header
 $header-border-color: $color-athens-gray;
