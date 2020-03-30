@@ -70,6 +70,14 @@
             &.categories-nav__item--no-products > a {
                 opacity: 0.5;
             }
+
+            &.categories-nav__item--important > a {
+                color: $color-red;
+
+                &:hover, &.hover, &:active, &.active, &:disabled, &.disabled {
+                  color: rgba($color-red, 0.85);
+                }
+            }
         }
     }
 }
@@ -86,6 +94,10 @@
     .categories-nav__item {
         &.categories-nav__item--no-products {
             opacity: 0.5;
+        }
+
+        &.categories-nav__item--important > a {
+            color: $color-red;
         }
     }
 }

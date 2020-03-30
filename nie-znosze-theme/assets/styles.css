@@ -7779,6 +7779,12 @@ html.shb-sliding-menu-open-right #page {
 .shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--no-products > a {
   opacity: 0.5;
 }
+.shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--important > a {
+  color: #e24a4a;
+}
+.shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--important > a:hover, .shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--important > a.hover, .shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--important > a:active, .shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--important > a.active, .shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--important > a:disabled, .shb-header-2 .shb-navbar #mainNav .categories-nav .categories-nav__list .categories-nav__item.categories-nav__item--important > a.disabled {
+  color: rgba(226, 74, 74, 0.85);
+}
 
 .shb-mobile-menu .categories-nav .categories-nav__list,
 .shb-mobile-menu .categories-nav .categories-nav__sublist {
@@ -7786,6 +7792,9 @@ html.shb-sliding-menu-open-right #page {
 }
 .shb-mobile-menu .categories-nav .categories-nav__item.categories-nav__item--no-products {
   opacity: 0.5;
+}
+.shb-mobile-menu .categories-nav .categories-nav__item.categories-nav__item--important > a {
+  color: #e24a4a;
 }
 
 /*# sourceMappingURL=styles.css.map */

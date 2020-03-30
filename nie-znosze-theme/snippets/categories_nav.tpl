@@ -1,5 +1,13 @@
 <nav class="categories-nav">
     <ul class="categories-nav__list">
+        <li class="
+            categories-nav__item
+            categories-nav__item--important
+            {if isset($collection) and $collection->id == 'glowna'}categories-nav__item--active{/if}
+        ">
+            {"nowości"|link_to_collection:"glowna":"Nowości"}
+        </li>
+
     {foreach from=$categories->all item="main_category"}
     {if $main_category->top_category}
         <li class="
