@@ -64,7 +64,13 @@
                             <input type="number" name="quantity" value="1" min="1"  aria-label="Quantity" class="shb-product-quantity shb-input-large">
 
                             <div class="shb-add-to-cart-section">
-                                <button name="addToCard" add-to-cart-button class="shb-btn shb-btn-dark shb-btn-large shb-btn-with-icon shb-add-to-cart-button" type="submit" {if !$variants[0]->available}disabled="disabled"{/if}>
+                                <button
+                                    name="addToCard"
+                                    add-to-cart-button
+                                    class="shb-btn shb-btn-dark shb-btn-large shb-btn-with-icon shb-add-to-cart-button"
+                                    type="submit"
+                                    {if !$variants[0]->available || $product->price == "0.00"}disabled="disabled"{/if}
+                                >
                                     <span class="shb-add-to-cart-button-text">
                                         {if $variants[0]->available}
                                             {trans}store_theme_translations.add_to_cart_button_label{/trans}

@@ -238,11 +238,20 @@
              data-property2="{$p->first_available_variant->property2}"
              data-property3="{$p->first_available_variant->property3}" data-product-id="{$p->id}"/>
       {if "productoptions"|in_array:$p->tags}
-      <a href="{$productUrl}" title="{$p->title}" class="shb-product-list-add-to-cart shb-btn shb-btn-small shb-btn-dark">
+      <a
+        href="{$productUrl}"
+        title="{$p->title}"
+        class="shb-product-list-add-to-cart shb-btn shb-btn-small shb-btn-dark"
+        {if !$p->available || $p->first_available_variant->price|money_without_currency == "0.00"}disabled="disabled"{/if}
+      >
         {trans}store_theme_translations.show_product_button_label{/trans}
       </a>
       {else}
-      <button type="submit" class="shb-product-list-add-to-cart shb-btn shb-btn-small shb-btn-dark">
+      <button
+        type="submit"
+        class="shb-product-list-add-to-cart shb-btn shb-btn-small shb-btn-dark"
+        {if !$p->available || $p->first_available_variant->price|money_without_currency == "0.00"}disabled="disabled"{/if}
+      >
         {trans}store_theme_translations.add_to_cart_button_label{/trans}
       </button>
       {/if}
