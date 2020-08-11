@@ -103,6 +103,9 @@
                     </form>
                     <div class="wysiwyg-content">
                         {$product->description}
+
+                        <h3>Uwaga</h3>
+                        <p><strong>Prosimy o zachowanie paragonu fiskalnego. Zwrot jest możliwy wówczas, gdy załączycie go do paczki wraz z formularzem zwrotu.</strong></p>
                     </div>
 
                     <section placeholder-under-product-details class="has-text-centered"></section>
