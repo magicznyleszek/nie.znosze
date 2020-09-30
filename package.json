@@ -18,7 +18,8 @@
     "url": "https://github.com/magicznyleszek/nie.znosze/issues"
   },
   "homepage": "https://github.com/magicznyleszek/nie.znosze#readme",
-  "dependencies": {
+  "devDependencies": {
+    "prettier": "^2.1.2",
     "sass": "^1.24.2"
   }
 }
