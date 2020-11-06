@@ -1,0 +1,230 @@
+/*******************************************************************************
+main styles aggregation
+*******************************************************************************/
+
+/* variables palette */
+
+/*******************************************************************************
+variables - all global and pallete variables for project
+*******************************************************************************/
+:root {
+  /* colors palette */
+
+  /* font families palette */
+
+  /* base */
+
+  /* root typography */
+
+  /* font sizes with respect to user browser default sizes */ /* probably 18px */ /* probably 16px */ /* probably 20px */ /* definitely 12pt */
+
+  /* leading size for all spacing between elements to be pretty */
+}
+
+/*******************************************************************************
+custom media queries and selectors shortcuts
+*******************************************************************************/
+
+/* media queries for scaling everything */
+
+/* groups selectors */
+
+/* basics */
+
+/*******************************************************************************
+a simple reset
+*******************************************************************************/
+*,
+:after,
+:before {
+  vertical-align: baseline;
+  box-sizing: inherit;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+/* reset HTML5BP links stuff */
+a[href]:after,
+abbr[title]:after {
+  content: "";
+}
+
+/*******************************************************************************
+root stuff and normalizations
+
+NOTE: Root line height is being used in many places throughout the project.
+It is recommended to keep all vertical margins and heights of elements to match
+the leading. Use caution when adding borders or when using vertical-align middle
+as they tend to add unwanted pixels, thus braking the flow.
+*******************************************************************************/
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  color: #333;
+  font-family: Source Sans Pro, Roboto, PT Sans, Droid Sans, Fira Sans,
+    Work Sans, Open Sans, Noto Sans, Hind, Dosis, Cabin, Verdana, Tahoma,
+    sans-serif;
+  font-weight: 400;
+  font-size: 112.5%;
+  line-height: 1.666;
+  text-rendering: optimizeLegibility;
+}
+
+/* clever page scaling with root font size changes */
+@media (min-width: 1536px) {
+  html {
+    font-size: 125%;
+  }
+  body {
+    padding: calc(calc(1.666 * 1rem) * 2);
+  }
+}
+@media (min-width: 721px) and (max-width: 1535px) {
+  body {
+    padding: calc(calc(1.666 * 1rem) * 1.5);
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 100%;
+  }
+  body {
+    padding: calc(calc(1.666 * 1rem) * 1);
+  }
+}
+@media print {
+  html {
+    font-size: 10pt;
+  }
+  body {
+    padding: 0;
+  }
+}
+
+/*******************************************************************************
+user-action influenced states
+*******************************************************************************/
+
+/* links */
+a {
+  text-decoration: underline;
+}
+a:visited {
+  color: #672494;
+}
+a:hover {
+  color: #c21f76;
+}
+a:active {
+  color: #fa1f4b;
+}
+
+/* text selection */
+:focus {
+  outline-color: #fa1f4b;
+  outline-style: auto;
+  outline-width: 0.25rem;
+}
+::-moz-focus-inner {
+  border: 0;
+}
+::selection {
+  background-color: #fa1f4b;
+  color: #fff;
+}
+
+/*******************************************************************************
+base typographic rules
+*******************************************************************************/
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+blockquote:not(:last-child),
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
+h4:not(:last-child),
+ol:not(:last-child),
+p:not(:last-child),
+pre:not(:last-child),
+ul:not(:last-child) {
+  margin-top: 0;
+  margin-bottom: calc(1.666 * 1rem);
+}
+h1,
+h2 {
+  border-bottom: 0.125rem solid #333;
+}
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 150%;
+}
+h3 {
+  font-size: 125%;
+}
+h4 {
+  font-size: inherit;
+  font-weight: 700;
+}
+p,
+pre {
+  margin: 0;
+}
+ol,
+ul {
+  margin-left: calc(1.666 * 1rem);
+  padding: 0;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+small,
+sub,
+sup {
+  font-size: 75%;
+}
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  line-height: 0;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+strong {
+  font-weight: 700;
+}
+blockquote,
+em {
+  font-style: italic;
+}
+blockquote {
+  border-left: 0.125rem solid #ccc;
+  padding-left: calc(1.666 * 1rem);
+}
+blockquote cite:before {
+  content: "\2014";
+  display: inline-block;
+  margin-right: 0.25rem;
+}

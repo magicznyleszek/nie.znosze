@@ -1,0 +1,17 @@
+{% assign versionCache = site.time|date: "%Y-%m-%d_%H-%M-%S" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ site.name }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/styles.css?{{ versionCache }}" media="all" rel="stylesheet">
+</head>
+
+<body>
+  {{ content }}
+</body>
+</html>
